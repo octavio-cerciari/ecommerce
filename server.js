@@ -85,22 +85,6 @@ app.get('/products', (req, res) => {
     res.json(products)
 })
 
-// app.get('/home', (req, res) => {
-//     res.redirect('/home')
-// })
-
-// app.get('/search', (req, res) => {
-//     res.redirect('/search')
-// })
-
-// app.get('/cart', (req, res) => {
-//     res.redirect('/cart')
-// })
-
-// app.get('/purchases', (req, res) => {
-//     res.redirect('/purchases')
-// })
-
 app.get('**', (req, res) => {
     res.redirect('/')
 })
