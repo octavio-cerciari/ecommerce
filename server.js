@@ -82,7 +82,7 @@ app.get('/products', (req, res) => {
             "price": 293.42
         }
     ]
-    
+    res.json(products)
 })
 
 app.get('**', (req, res) => {
