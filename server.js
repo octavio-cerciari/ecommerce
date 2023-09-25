@@ -7,10 +7,6 @@ app.use(express.static("ecommerce"))
 //mongoose.connect("mongodb://localhost:27017")
 app.use(express.json())
 
-// app.get('**', (req, res) => {
-//     res.redirect('/')
-// })
-
 app.get('/products', (req, res) => {
     let products = [
         {
@@ -87,6 +83,26 @@ app.get('/products', (req, res) => {
         }
     ]
     res.json(products)
+})
+
+// app.get('/home', (req, res) => {
+//     res.redirect('/home')
+// })
+
+// app.get('/search', (req, res) => {
+//     res.redirect('/search')
+// })
+
+// app.get('/cart', (req, res) => {
+//     res.redirect('/cart')
+// })
+
+// app.get('/purchases', (req, res) => {
+//     res.redirect('/purchases')
+// })
+
+app.get('**', (req, res) => {
+    res.redirect('/')
 })
 
 app.listen(port, () => {
